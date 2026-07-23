@@ -153,7 +153,7 @@ export default function PublicReport() {
         )}
 
         <p className="text-center text-xs text-gray-400 pt-4">
-          Report prepared by {agency?.name || "your agency"} · Powered by Roasify
+          Report prepared by {agency?.name || "your agency"} · Powered by RAKH
         </p>
       </div>
     </div>

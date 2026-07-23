@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="Enterprise version" />
+    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="Enterprise version">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PublicReport.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PublicReport.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +24,12 @@
     &quot;assignee&quot;: &quot;kapousa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/kapousa/roasify-frontend.git&quot;,
-    &quot;accountId&quot;: &quot;dff02569-b121-4a7d-a6a4-8dee342cea54&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kapousa/rakh-frontend.git",
+    "accountId": "dff02569-b121-4a7d-a6a4-8dee342cea54"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
