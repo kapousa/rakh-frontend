@@ -33,7 +33,8 @@
     "newToProduct": "جديد على {{productName}}؟",
     "alreadyHaveAccount": "لديك حساب بالفعل؟",
     "createAccountLink": "إنشاء حساب",
-    "signInLink": "تسجيل الدخول"
+    "signInLink": "تسجيل الدخول",
+    "demMessage": "يرجى الاتصال بنا للحصول على نسخة تجريبية للمستخدم"
   },
   "dashboard": {
     "welcomeBack": "مرحبًا بعودتك",

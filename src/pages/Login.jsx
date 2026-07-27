@@ -57,7 +57,7 @@ export default function Login() {
         </form>
 
         <p className="text-center text-sm text-gray-400 mt-4">
-          {mode === "signin"
+          {/*{mode === "signin"
             ? t("login.newToProduct", { productName: branding.productName })
             : t("login.alreadyHaveAccount")}{" "}
           <button
@@ -65,6 +65,12 @@ export default function Login() {
             onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
           >
             {mode === "signin" ? t("login.createAccountLink") : t("login.signInLink")}
+          </button>*/}
+          <button
+            className="text-brand-600 font-medium hover:underline"
+            onClick={() => setMode(mode === "signin")}
+          >
+            {t("login.demMessage")}
           </button>
         </p>
       </div>
