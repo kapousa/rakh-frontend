@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="Enterprise version">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PublicReport.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PublicReport.jsx" afterDir="false" />
+    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="change from roasify to rakh">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +21,12 @@
     &quot;assignee&quot;: &quot;kapousa&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kapousa/rakh-frontend.git",
-    "accountId": "dff02569-b121-4a7d-a6a4-8dee342cea54"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kapousa/rakh-frontend.git&quot;,
+    &quot;accountId&quot;: &quot;dff02569-b121-4a7d-a6a4-8dee342cea54&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -46,7 +43,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.Run App.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.Run App.executor&quot;: &quot;Run&quot;,
     &quot;Python.uvicorn.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -84,7 +81,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (roasify-backend)" />
+      <option name="SDK_NAME" value="Python 3.11 (rakh-backend) (2)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../roasify-backend" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -148,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784787412696</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change from roasify to rakh">
+      <option name="closed" value="true" />
+      <created>1784807431357</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1784807431357</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +164,8 @@
     <MESSAGE value="change app name" />
     <MESSAGE value="Add translation, plans with gaps" />
     <MESSAGE value="Enterprise version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enterprise version" />
+    <MESSAGE value="change from roasify to rakh" />
+    <option name="LAST_COMMIT_MESSAGE" value="change from roasify to rakh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
