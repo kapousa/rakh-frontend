@@ -3,23 +3,29 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files and install dependencies
+# Declare build arguments
+ARG VITE_SUPABASE_URL
+ARG VITE_SUPABASE_ANON_KEY
+ARG VITE_API_BASE_URL
+
+# Expose them to Vite during the build process
+ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL
+ENV VITE_SUPABASE_ANON_KEY=$VITE_SUPABASE_ANON_KEY
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+
 COPY package*.json ./
 RUN npm ci
 
-# Copy all source code
 COPY . .
 
-# Build the Vite app for production (outputs to /app/dist)
+# Build Vite with the injected variables
 RUN npm run build
 
 # --- Stage 2: Serve Stage ---
 FROM nginx:alpine
 
-# Copy custom Nginx config for Client-Side Routing (SPA)
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Create default Nginx config to handle React Router / single-page apps
 RUN echo 'server { \
     listen 80; \
     location / { \
@@ -29,7 +35,6 @@ RUN echo 'server { \
     } \
 }' > /etc/nginx/conf.d/default.conf
 
-# Expose port 80 for Easypanel
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
