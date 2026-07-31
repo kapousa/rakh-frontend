@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="fix Dockerfile">
+    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="Remove sign up for now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/clients/ConnectionsPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/clients/ConnectionsPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/ar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PublicReport.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PublicReport.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785146081665</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove sign up for now">
+      <option name="closed" value="true" />
+      <created>1785149229808</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785149229808</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +214,8 @@
     <MESSAGE value="change from roasify to rakh" />
     <MESSAGE value="add Dockerfile" />
     <MESSAGE value="fix Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Dockerfile" />
+    <MESSAGE value="Remove sign up for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove sign up for now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

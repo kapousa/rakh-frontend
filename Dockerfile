@@ -1,40 +1,39 @@
-# --- Stage 1: Build Stage ---
-FROM node:18-alpine AS builder
+# RAKH Frontend — Vite/React SPA, multi-stage build
+#
+# NOTE on env vars: Vite bakes VITE_* variables into the built JS at BUILD
+# time, not at container runtime — so they're passed as build ARGs here,
+# not as regular `environment:` entries in docker-compose. VITE_SUPABASE_URL
+# and VITE_SUPABASE_ANON_KEY are safe to bake in (the anon key is meant to
+# be public-facing; RLS is what actually protects data, not secrecy of this
+# key). Never do this pattern with the SERVICE ROLE key — that one only
+# ever belongs in the backend container's runtime environment.
 
+FROM node:20-alpine AS builder
 WORKDIR /app
-
-# Declare build arguments
-ARG VITE_SUPABASE_URL
-ARG VITE_SUPABASE_ANON_KEY
-ARG VITE_API_BASE_URL
-
-# Expose them to Vite during the build process
-ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL
-ENV VITE_SUPABASE_ANON_KEY=$VITE_SUPABASE_ANON_KEY
-ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 
 COPY package*.json ./
 RUN npm ci
 
 COPY . .
 
-# Build Vite with the injected variables
+ARG VITE_SUPABASE_URL
+ARG VITE_SUPABASE_ANON_KEY
+ARG VITE_API_BASE_URL
+ENV VITE_SUPABASE_URL=$VITE_SUPABASE_URL \
+    VITE_SUPABASE_ANON_KEY=$VITE_SUPABASE_ANON_KEY \
+    VITE_API_BASE_URL=$VITE_API_BASE_URL
+
 RUN npm run build
 
-# --- Stage 2: Serve Stage ---
-FROM nginx:alpine
+# ---------------------------------------------------------------------------
+FROM nginx:1.27-alpine AS production
 
 COPY --from=builder /app/dist /usr/share/nginx/html
-
-RUN echo 'server { \
-    listen 80; \
-    location / { \
-        root /usr/share/nginx/html; \
-        index index.html index.htm; \
-        try_files $uri $uri/ /index.html; \
-    } \
-}' > /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD wget --quiet --tries=1 --spider http://localhost:80/ || exit 1
 
 CMD ["nginx", "-g", "daemon off;"]

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link2, RefreshCw, Trash2, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { api } from "../../lib/api";
-import Badge from "../ui/Badge";
 
 const PLATFORM_META = {
   google: { label: "Google Ads", color: "bg-gradient-to-br from-amber-400 to-red-500" },
@@ -114,11 +113,10 @@ export default function ConnectionsPanel({ clientId, pendingAccountPicker, onAcc
 
         {AVAILABLE_PLATFORMS.filter((p) => !connectedPlatforms.has(p)).map((platform) => {
           const meta = PLATFORM_META[platform];
-          const isComingSoon = platform !== "google";
           return (
             <button
               key={platform}
-              disabled={isComingSoon || connecting === platform}
+              disabled={connecting === platform}
               onClick={() => handleConnect(platform)}
               className="w-full flex items-center justify-between rounded-lg border border-dashed border-gray-200 px-3 py-2 text-left hover:border-brand-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
@@ -126,9 +124,7 @@ export default function ConnectionsPanel({ clientId, pendingAccountPicker, onAcc
                 <span className={`h-6 w-6 rounded ${meta.color} opacity-60`} />
                 <p className="text-xs font-medium text-gray-600">Connect {meta.label}</p>
               </div>
-              {isComingSoon ? (
-                <Badge variant="info" className="text-[10px]">Coming soon</Badge>
-              ) : connecting === platform ? (
+              {connecting === platform ? (
                 <Loader2 size={13} className="animate-spin text-gray-400" />
               ) : (
                 <Link2 size={13} className="text-gray-400" />
