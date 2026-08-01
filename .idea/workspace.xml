@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="CHANGE NAME1">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+    <list default="true" id="dc36d283-5f85-4f2e-a102-a82aab3ed8f7" name="Changes" comment="Fixing cashing issue">
+      <change beforePath="$PROJECT_DIR$/src/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/en.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785569039630</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixing cashing issue">
+      <option name="closed" value="true" />
+      <created>1785577861953</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1785577861953</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +250,8 @@
     <MESSAGE value="Add meta and TikTok connection" />
     <MESSAGE value="CHANGE NAME" />
     <MESSAGE value="CHANGE NAME1" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHANGE NAME1" />
+    <MESSAGE value="Fixing cashing issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing cashing issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
