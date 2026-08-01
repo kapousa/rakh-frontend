@@ -8,7 +8,7 @@
 # key). Never do this pattern with the SERVICE ROLE key — that one only
 # ever belongs in the backend container's runtime environment.
 
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
